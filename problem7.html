@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Click, Key Press, and Mouseover Demo</title>
+</head>
+<body>
+  <h1>Click, Key Press, and Mouseover Demo</h1>
+
+  <div id="click-area">Click here.</div>
+  <div id="key-press-area">Press any key to display the key code.</div>
+  <img id="image" src="Images/Asif.jpg" height="200px" width="170px" />
+
+  <script>
+    function handleClick(event) {
+      alert(`You clicked at (${event.clientX}, ${event.clientY})`);
+    }
+
+    function handleKeyPress(event) {
+      alert(`You pressed the key with code ${event.keyCode}`);
+    }
+
+    function handleMouseOver(event) {
+      var image = document.getElementById("image");
+      image.src = "Images/asif2.jpg";
+    }
+
+    document.getElementById("click-area").addEventListener("click", handleClick);
+    document.addEventListener("keydown", handleKeyPress);
+    document.getElementById("image").addEventListener("mouseover", handleMouseOver);
+  </script>
+</body>
+</html> 

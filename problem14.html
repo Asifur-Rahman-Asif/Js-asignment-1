@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX GET Request</title>
+  <script>
+    function sendAjaxGetRequest() {
+      var xhr = new XMLHttpRequest();
+      var url = "https://api.example.com/data";
+      
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var response = xhr.responseText;
+          console.log(response); 
+        }
+      };
+      
+      xhr.open("GET", url);
+      xhr.send();
+    }
+  </script>
+</head>
+<body>
+  <button onclick="sendAjaxGetRequest()">Send AJAX GET Request</button>
+</body>
+</html>

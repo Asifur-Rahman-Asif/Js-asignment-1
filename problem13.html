@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Change Paragraph Text Color</title>
+  <style>
+    .class1 {
+      color: blue;
+    }
+
+    .class2 {
+      color: green;
+    }
+
+    .class3 {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <p class="class1">This is paragraph 1 with class1.</p>
+  <p class="class2" id="paragraph2">This is paragraph 2 with class2 and an id of "paragraph2".</p>
+  <p class="class3">This is paragraph 3 with class3.</p>
+
+  <button onclick="changeTextColor()">Change Text Color</button>
+
+  <script>
+    function changeTextColor() {
+      var paragraphs = document.getElementsByClassName("class1");
+      for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
+

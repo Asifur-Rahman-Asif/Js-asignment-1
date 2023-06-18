@@ -1,0 +1,19 @@
+<html>
+    <head>
+      <title>Change Image Source</title>
+    </head>
+    <body>
+      <img id="myImage" src="Images/asif2.jpg" alt="Initial Image" height="300px" width="300px">
+      <br>
+      <button onclick="changeImage()">Change Image</button>
+    
+      <script>
+        function changeImage() {
+          var image = document.getElementById("myImage");
+          image.src = "images/Asif.jpg";
+          image.alt = "New Image";
+        }
+      </script>
+    </body>
+    </html>
+    

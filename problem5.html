@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Info</title>
+  <script>
+    function getBrowserInfo() {
+      const browserName = navigator.userAgent.split(" ")[0];
+      const browserVersion = navigator.userAgent.split(" ")[1];
+      return {
+        browserName: browserName,
+        browserVersion: browserVersion,
+      };
+    }
+
+    const browserInfo = getBrowserInfo();
+    console.log(`My Browser is ${browserInfo.browserName} v${browserInfo.browserVersion}`);
+  </script>
+</head>
+<body>
+</body>
+</html>

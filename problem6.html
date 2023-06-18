@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Location</title>
+  <script>
+    function getCurrentLocation() {
+      var geolocation = navigator.geolocation;
+
+      if (geolocation) {
+        geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          document.getElementById("latitude").innerHTML = latitude;
+          document.getElementById("longitude").innerHTML = longitude;
+        }, function(error) {
+        });
+      } else {
+      }
+    }
+
+    window.onload = getCurrentLocation;
+  </script>
+</head>
+<body>
+  <h1>My Current Location:</h1>
+  <p>Latitude: <span id="latitude"></span></p>
+  <p>Longitude: <span id="longitude"></span></p>
+</body>
+</html>

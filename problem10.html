@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Highlight paragraph</title>
+</head>
+<body>
+  <h1>Highlight p tag</h1>
+
+  <button onclick="highlightParagraph()">Highlight</button>
+  <p id="paragraph">This is a paragraph.</p>
+
+  <style>
+  .highlight {
+    background-color: yellow;
+  }
+  </style>
+
+  <script>
+    function highlightParagraph() {
+      var paragraph = document.getElementById("paragraph");
+      paragraph.classList.add("highlight");
+    }
+  </script>
+</body>
+</html>
